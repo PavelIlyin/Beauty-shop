@@ -1,0 +1,98 @@
+// .footer {}
+
+.communication-block {
+    background-color: $mainColor_white;
+}
+
+.communication-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 37px 0;
+
+    @media (max-width: 870px) {
+        flex-direction: column;
+        padding: 10px 0;
+        gap: 15px;
+    }
+		
+		&__icon {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+
+            & a{
+                width: 45px;
+                height: 45px;
+                display: block;
+                border: 2px solid $mainColor_green;
+                border-radius: 50px;
+                text-align: center;
+
+                &:hover {
+                   box-shadow: inset 1px 1px 6px $mainColor_green;
+                }
+
+                &:nth-child(3) {
+                    & img {
+                        padding-top: 11px;
+                    }
+                }
+
+                &:nth-child(4) {
+                     & img {
+                        padding-top: 10px;
+                    }
+                }
+            }
+
+            & img {
+                padding-top: 14px;
+            }
+		}
+
+		// &__address {}
+
+        &__contact{
+            
+            @media (max-width: 650px) {
+                flex-direction: column;
+                align-self: center;
+                gap: 15px;
+            }
+        }
+}
+
+.data-block {
+    background-color: $bgColor_white;
+}
+
+.data-info {
+    font-size: 12px;
+    line-height: 14px;
+    color: $footerColor_grey;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 25px 0;
+    gap: 10px;
+
+		@media (max-width: 470px) {
+            flex-direction: column;
+        }
+
+		&__permission {
+            @media (max-width: 470px) {
+                text-align: center;
+                align-self: center;
+            }
+		}
+
+		&__privacy {
+            @media (max-width: 470px) {
+                align-self: center;
+                text-align: center;
+            }
+        }
+}

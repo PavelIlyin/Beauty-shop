@@ -1,0 +1,94 @@
+@media (max-width: 475px){
+
+.nav-top{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        //&__item {}
+    }
+
+    .header__nav {
+        padding: 0 0 25px 20px;
+        flex-direction: column;
+        font-size: 34px;
+        border-bottom: none;
+    }
+
+    .menu-box{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .menu__btn{
+        width: 30px;
+        height: 30px;
+        top: 20px;
+        right: 5px;
+        position: relative;
+        z-index:2;
+        overflow: hidden;
+
+            &> span{
+                width: 30px;
+                height: 2px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: $navColor_black;
+                transition: all 0.5s;
+            }
+
+            & span:nth-of-type(2) {
+                top: calc(50% - 7px);
+            }
+
+            span:nth-of-type(3) {
+                top: calc(50% + 7px);
+            }
+
+            &.active{
+                position: fixed;
+
+                & span:nth-of-type(1) {
+                    display: none;
+                }
+
+                & span:nth-of-type(2) {
+                    top: 50%;
+                    transform: translate(-50%, 0%) rotate(45deg); 
+                    background-color: $navColor_black; 
+                }
+
+                & span:nth-of-type(3) {
+                    top: 50%;
+                    transform: translate(-50%, 0%) rotate(-45deg);
+                    background-color: $navColor_black; 
+                }
+            }
+    }
+
+    .nav-block {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 30px 15px;
+        background: $bgColor_grey;
+        transform: translateX(-100%);
+        transition: transform 0.5s; 
+        z-index: 1;
+
+            &.active {
+                transform: translateX(0);
+            }
+    }
+
+    .header{
+
+        &.active {
+            padding: 30px 0 0 0;
+        }
+    }
+}
