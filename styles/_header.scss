@@ -1,0 +1,141 @@
+.header {
+    overflow: hidden;
+}
+
+.nav-block {
+    background-color: $bgColor_grey;
+}
+
+.nav-top {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+	padding: 16px 0;
+
+	&__item {
+        color: $navColor_black;
+	}
+}
+
+.contact-title {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $mainColor_white;
+
+    @media (max-width: 650px) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+     
+    @media (max-width: 475px) {
+        flex-direction: column;
+        align-self: center;
+        gap: 10px;
+    }
+
+    &::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        border-bottom: 1px solid $bgColor_grey;
+        width: 300%;
+        margin: 0 -100%;
+    }
+}
+
+.block-name {
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+	&__logo {
+        width: 100%;
+
+        @media (max-width: 475px) {
+            text-align: center;
+        }
+	}
+
+    @media (max-width: 475px) {
+        flex-direction: column;
+        align-self: center;
+        gap: 0;
+    } 
+    
+
+	&__title {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 42px;
+        letter-spacing: 0.1em;
+        color: $mainColor_green;
+	}
+}
+
+.contact-block {
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+
+    @media (max-width: 650px) {
+        flex-basis: 100%;
+        align-self: flex-end;    
+    }
+
+    @media (max-width: 475px) {
+        flex-direction: column-reverse;
+        gap: 10px;
+        align-self: center;
+    }
+
+	&__tel {
+        font-size: 16px;
+        line-height: 19px;
+        color: $fontColor_black;
+	}
+
+    & a {
+        display: inline-block;
+        padding: 12px 26px;
+        color: $fontColor_black;
+        border-radius: 40px;
+        border: 2px solid $mainColor_green;
+                
+            &:hover{
+                color: $bgColor_white;
+                background-color: $mainColor_green;
+            }
+    }        
+	
+}
+
+// .menu-block {}
+
+.nav-second {
+    display: flex;
+    justify-content: center;
+	align-items: center;
+    gap: 40px;
+    padding: 30px 0;
+	
+    &__item {
+        font-size: 16px;
+        line-height: 19px;
+        color: $fontColor_black;
+	}
+
+    @media (max-width: 720px) {
+        justify-content: space-between;
+        gap: 15px;
+    }
+
+    @media (max-width: 565px) {
+        flex-direction: column;
+        align-items: center;
+    }
+}

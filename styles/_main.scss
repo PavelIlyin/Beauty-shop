@@ -1,0 +1,300 @@
+.main {
+    flex: 1 1 auto;
+    background-color: $bgColor_white;
+
+		&__banner {
+            background-image: url('../img/bg/bg_chair.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            @media (max-width: 740px) {
+                background-position: -725px 0;
+            }
+
+            @media (max-width: 650px) {
+                background-position: -475px 0;
+            }
+
+            @media (max-width: 550px) {
+                background-position: -450px 0;
+            }
+
+            @media (max-width: 500px) {
+                background-position: -340px 0;
+            }
+
+            @media (max-width: 450px) {
+                background-position: -375px 0;
+            }
+
+            @media (max-width: 390px) {
+                background-position: -220px 0;
+            }
+
+            @media (max-width: 360px) {
+                background-position: -290px 0;
+            }
+
+            @media (max-width: 300px) {
+                background-position: -395px 0;
+            }
+		}
+}
+
+.banner {
+
+		&__content {
+            display: flex;
+            justify-content: flex-start;
+		}
+
+        &__card {
+            max-width: 308px;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            padding: 195px 0;
+            gap: 50px;
+
+            @media (max-width: 650px) {
+                padding: 140px 0;
+                gap: 30px;
+            }
+
+            @media (max-width: 550px) {
+                padding: 120px 0;
+            }
+
+            @media (max-width: 500px) {
+                padding: 100px 0 100px 0;
+                gap: 20px;
+            }
+
+            @media (max-width: 390px) {
+               padding: 50px 0 50px 0;
+                gap: 20px;
+            }
+
+            & h2 {
+                font-weight: 700;
+                font-size: 48px;
+                line-height: 56px;
+                color: $mainColor_white;
+
+                @media (max-width: 500px) {
+                    font-size: 30px;
+                    line-height: 42px;
+                }
+            }
+
+            & p {
+                line-height: 20px;
+                color: $mainColor_white;
+                
+                @media (max-width: 360px) {
+                    max-width: 70%;
+            }                       
+            }
+          
+            & a {
+                display: inline-block;
+                color: $mainColor_white;
+                border: 2px solid $mainColor_white;
+                border-radius: 40px;
+                padding: 13px 45px;
+                letter-spacing: 0.05em;
+                text-align: center;
+
+                &:hover{
+                    color: $mainColor_green;
+                    background-color: $mainColor_white;
+                }
+            }
+
+        }         
+}
+
+// .card {}
+
+.card-title{
+    margin: 80px 0 38px 0;
+
+    @media (max-width: 750px) {
+        margin: 40px 0 38px 0;
+    }
+
+    & h3 {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+        color: $fontColor_black;
+
+        @media (max-width: 750px) {
+            text-align: center;
+        }
+    }
+}
+
+.card-list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 100px 0;
+    gap: 15px;
+
+    @media (max-width: 750px) {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 0 50px 0;
+    }
+}
+
+.card-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 255px;
+    background-color: $mainColor_white;
+    padding: 25px 0;
+    gap: 20px;
+    
+		&__img {
+            
+            & img {
+                width: 100%;
+            }
+		}
+
+		&__title {
+            padding: 0 30px;
+            line-height: 20px;
+            text-align: center;
+            color: $navColor_black;
+		}
+
+		&__price {
+            font-weight: 500;
+            font-size: 21px;
+            line-height: 25px;
+            text-align: center;
+            letter-spacing: 0.05em;
+		}
+
+        & button {
+            display: inline-block;
+            border-radius: 30px;
+            padding: 7px 38px;
+            text-align: center;
+            letter-spacing: 0.05em;
+            color: $mainColor_white;
+            background-color: $mainColor_green;
+            border: 2px solid $mainColor_green;
+
+            &:hover {
+                color: $mainColor_green;
+                background-color: $mainColor_white;
+            }
+        }
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 132px 0;
+    gap: 10px;
+
+    @media (max-width: 1000px) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @media (max-width: 540px) {
+        margin: 0 0 70px 0;
+    }
+   
+}
+.info-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 540px;
+    flex-basis: 100%;
+    background-color: $mainColor_green;
+    color: $mainColor_white;
+    padding: 35px 45px 35px 40px;
+    
+    @media (max-width: 1000px) {
+        width: 100%;;
+    }
+
+    @media (max-width: 540px) {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 20px;
+        padding: 30px 20px;
+    }
+    
+}
+.info-box {
+        min-height: 150px;
+		
+        @media (max-width: 540px) {
+            text-align: center;
+        }
+
+		&__title {
+            font-size: 18px;
+            line-height: 21px;
+            padding: 0 0 25px 0;
+            max-width: 250px
+		}
+
+		&__text {
+            line-height: 20px;
+            padding: 0 0 25px 0;
+            max-width: 250px
+		}
+
+
+		&__entry {
+
+            & form {
+
+                & input {
+                    border-radius: 30px;
+                    padding: 9px 25px;
+                    font-size: 14px;
+                    line-height: 16px;
+
+                    &:focus {
+                        box-shadow: inset 1px 1px 5px $navColor_black;
+                    }
+
+                    @media (max-width: 540px) {
+                        width: 100%;
+                    }
+
+                }
+            }
+		}
+
+		&__link {
+            color: $mainColor_white;
+            display: inline-block;
+            padding: 9px 29px;
+            border: 2px solid $mainColor_white;
+            border-radius: 30px;
+
+            &:hover {
+                color: $mainColor_green;
+                background-color: $mainColor_white;
+            }
+		}
+}
+.info-img {
+
+    & img {
+        width: 100%;
+    }
+}
